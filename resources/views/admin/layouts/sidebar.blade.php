@@ -124,9 +124,26 @@
         </li>
         <hr class="sidebar-divider">
         <div class="sidebar-heading">
-            Конфигурация
+            Взаимодействие
         </div>
         <hr class="sidebar-divider">
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour"
+               aria-expanded="true" aria-controls="collapseFour">
+                <i class="fas fa-shopping-cart	"></i>
+                <span>Продажи</span>
+            </a>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Действия:</h6>
+                    <a class="collapse-item" href="{{ route('orders.index') }}">Заказы</a>
+                    <a class="collapse-item" href="">Купоны</a>
+                    <a class="collapse-item" href="">Веб-чат</a>
+                    <a class="collapse-item" href="">Рассылка</a>
+                </div>
+            </div>
+        </li>
+
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
                aria-expanded="true" aria-controls="collapseThree">

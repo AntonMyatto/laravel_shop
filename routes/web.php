@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\ClientController;
 use App\Http\Controllers\Admin\ClientsMessagesController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\Interaction\OrderController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\QuestionController;
@@ -51,6 +52,7 @@ Route::group(['prefix' => 'manager','middleware' => 'auth'], function () {
     Route::resource('roles', RoleController::class)->middleware(['middleware' => 'role:root']);
     Route::resource('permissions', PermissionController::class)->middleware(['middleware' => 'role:root']);
     Route::resource('currencies', CurrencyController::class)->middleware(['middleware' => 'role:root']);
+    Route::resource('orders', OrderController::class)->middleware(['middleware' => 'role:root']);
     Route::get('error-rules', [App\Http\Controllers\Admin\RoleController::class, 'norole'])->name('norole');
     Route::get('logs', [\Rap2hpoutre\LaravelLogViewer\LogViewerController::class, 'index'])->name('logs');
 });
