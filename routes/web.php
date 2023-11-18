@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Admin\PostController;
+use App\Http\Controllers\Admin\Settings\CurrencyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,7 +49,9 @@ Route::group(['prefix' => 'manager','middleware' => 'auth'], function () {
     Route::resource('users', UserController::class)->middleware(['middleware' => 'role:root']);
     Route::resource('roles', RoleController::class)->middleware(['middleware' => 'role:root']);
     Route::resource('permissions', PermissionController::class)->middleware(['middleware' => 'role:root']);
+    Route::resource('currencies', CurrencyController::class)->middleware(['middleware' => 'role:root']);
     Route::get('error-rules', [App\Http\Controllers\Admin\RoleController::class, 'norole'])->name('norole');
+    Route::get('logs', [\Rap2hpoutre\LaravelLogViewer\LogViewerController::class, 'index'])->name('logs');
 });
 
 Auth::routes();
