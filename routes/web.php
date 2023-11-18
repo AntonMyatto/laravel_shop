@@ -27,6 +27,7 @@ use App\Http\Controllers\Admin\Settings\CurrencyController;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });

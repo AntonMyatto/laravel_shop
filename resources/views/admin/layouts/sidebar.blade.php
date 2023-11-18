@@ -94,7 +94,6 @@
             Содержимое
         </div>
 
-
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
         <li class="nav-item">

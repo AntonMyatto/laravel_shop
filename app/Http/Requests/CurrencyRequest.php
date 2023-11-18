@@ -26,7 +26,7 @@ class CurrencyRequest extends FormRequest
         return [
             'name' => 'required',
             'code' => 'required',
-            'exchange_rate' => 'required'
+            'exchange_rate' =>  'required'
         ];
     }
 }
