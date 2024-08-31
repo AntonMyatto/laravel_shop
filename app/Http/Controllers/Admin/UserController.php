@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\UserRequest;
 use App\Models\User;
 use App\Models\Role;
@@ -9,7 +10,6 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {

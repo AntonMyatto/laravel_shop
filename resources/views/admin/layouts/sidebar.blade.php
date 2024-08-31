@@ -33,33 +33,9 @@
         <div class="sidebar-heading">
             Пользователи
         </div>
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapseclient" aria-expanded="true" aria-controls="collapseclient">
-                <i class="fas fa-child"></i>
-                <span>О клиентах</span>
-            </a>
-            <div id="collapseclient" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Действия:</h6>
-                    <a class="collapse-item" href="{{ route('clients.index') }}">Клиенты</a>
-                    <a class="collapse-item" href="{{ route('clients-messages.index') }}">Сообщения</a>
-                </div>
-            </div>
-        </li>
+
     @elseif($user->hasRole('mngr'))
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapseclient" aria-expanded="true" aria-controls="collapseclient">
-                <i class="fas fa-child"></i>
-                <span>О клиентах</span>
-            </a>
-            <div id="collapseclient" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Действия:</h6>
-                    <a class="collapse-item" href="{{ route('clients.index') }}">Клиенты</a>
-                    <a class="collapse-item" href="{{ route('clients-messages.index') }}">Сообщения</a>
-                </div>
-            </div>
-        </li>
+
     @elseif($user->hasRole('sc'))
 
     @elseif($user->hasRole('cnt'))
@@ -109,14 +85,6 @@
                     <a class="collapse-item" href="{{ route('products.index') }}">Товары</a>
                     <a class="collapse-item" href="{{ route('posts.index') }}">Посты</a>
                     <a class="collapse-item" href="{{ route('tags.index') }}">Теги</a>
-                    <div class="menu-index">
-                        <a class="collapse-item test-class" href="{{ route('tests.index') }}">Тесты</a>
-                        <ul class="pl-2 question-class">
-                            <li class="nav-item">
-                                <a class="collapse-item" href="{{ route('questions.index') }}">- Вопросы</a>
-                            </li>
-                        </ul>
-                    </div>
                     <a class="collapse-item" href="cards.html">Реклама</a>
                     <a class="collapse-item" href="cards.html">Статистика</a>
                 </div>
@@ -136,7 +104,6 @@
             <div id="collapseFour" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Действия:</h6>
-                    <a class="collapse-item" href="{{ route('orders.index') }}">Заказы</a>
                     <a class="collapse-item" href="">Купоны</a>
                     <a class="collapse-item" href="">Веб-чат</a>
                     <a class="collapse-item" href="">Рассылка</a>
@@ -155,7 +122,6 @@
                     <h6 class="collapse-header">Действия:</h6>
                     <a class="collapse-item" href="">Интеграции</a>
                     <a class="collapse-item" href="">Местонахождение</a>
-                    <a class="collapse-item" href="{{ route('currencies.index') }}">Валюта</a>
                     <a class="collapse-item" href="">Статус заказов</a>
                     <a class="collapse-item" href="">Языки</a>
                     <a class="collapse-item" href="{{ route('logs') }}">Журнал ошибок</a>
